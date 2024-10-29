@@ -26,6 +26,9 @@ dotfiles: ## Clone dotfiles from Github & git-crypt unlock
 	git-crypt unlock
 	thunar ~/src/github.com/minorugh/dotfiles
 
+# Change shell to zsh after run make of dotfiles
+# | chsh -s /usr/bin/zsh
+
 
 # Back up for private key
 export: ## Export private keys for primary and secondary keys
