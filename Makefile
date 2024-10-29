@@ -4,11 +4,10 @@
 
 .ONESHELL:
 gpg: ## Restor from USB backup media
-	mkdir -p ${HOME}/backup/zsh
+	sudo apt install gnupg git-crypt
+	mkdir -p ${HOME}/backup
 	cd ${HOME}/backup
 	sudo cp /media/minoru/USB/secret-all.key ${HOME}/backup
-	sudo cp /media/minoru/USB/env.sh ${HOME}/backup
-	mv -f env.sh ${HOME}/backup/zsh
 
 	mkdir -p ~/.gnupg/private-keys-v1.d
 	chmod 700 ~/.gnupg ~/.gnupg/private-keys-v1.d
