@@ -19,12 +19,12 @@ gpg: ## Restor from USB backup media
 	sudo shred -uvz secret-all.key
 
 dotfiles: ## Clone dotfiles from Github & git-crypt unlock
-	mkdir -p ${HOME}/src
-	cd ~/src
+	mkdir -p ${HOME}/src/github.com/minorugh
+	cd ~/src/github.com/minorugh
 	git clone git@github.com:minorugh/dotfiles.git
 	cd dotfiles
 	git-crypt unlock
-	thunar ~/src/dotfiles
+	thunar ~/src/github.com/minorugh/dotfiles
 
 
 # Back up for private key
